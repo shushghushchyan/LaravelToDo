@@ -1,0 +1,18 @@
+import './bootstrap';
+import '../css/app.css';
+import '../css/app.scss';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { createInertiaApp } from '@inertiajs/react';
+import { route } from 'ziggy-js';
+import { Ziggy } from './ziggy';
+// window.route = (name, params, absolute) => route(name, params, absolute, Ziggy);
+createInertiaApp({
+  resolve: (name) => {
+    const pages = import.meta.glob('./Pages/**/*.jsx', { eager: true });
+    return pages[`./Pages/${name}.jsx`]; 
+  },
+  setup({ el, App, props }) {
+    createRoot(el).render(<App {...props} />);
+  },
+});

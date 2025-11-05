@@ -1,0 +1,328 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background: url(/public/build/assets/user.webp) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Add white transparent overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4); /* white layer with 70% opacity */
+    z-index: -1; 
+}
+
+form{
+    position: absolute;
+    background-color: #c0af9b;
+    top: 100px;;
+    left: 50px;   
+    width: 500px;
+    border-radius: 20px;
+    padding: 10px;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+input{
+    width: 400px!important;
+    height: 60px;
+    border-radius: 10px!important;
+    border: 2px solid #e0e0dd!important;
+    padding: 20px;
+    font-size: 16px;
+
+}
+.checkbox{
+    width: 20px!important;
+    height: 20px!important;
+    border-radius: 5px!important;
+    border: 2px solid #e0e0dd!important;
+    margin-right: 10px;
+}
+
+.react-calendar__tile--active {
+  background: #4F46E5 !important;
+  color: white !important;
+  border-radius: 10px;
+}
+button{
+    height: 30px;
+    display:flex;
+    align-items: center;
+    padding:0 10px !important;
+    border-radius: 10px;
+    border: none;
+    background-color: #e0e0dd!important;
+    color: #413A22!important;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+button:hover{
+    background-color: #c0af9b!important;
+    color: white!important;
+}
+.todoContainer {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    height: 625px;
+    padding: 10px;
+    position: absolute;
+    background-color: #f5f5f0;
+    rotate: -4deg;
+    left: 825px;
+    bottom: 100px;
+    border-radius: 20px;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+ .taskInput {
+    width: 100%!important;
+    height: 50px!important;
+    border-top-left-radius: 20px!important;
+    border-top-right-radius: 20px!important;
+    border-bottom-left-radius: 0px!important;
+    border-bottom-right-radius: 0px!important;
+    border: none!important;
+    background-color: #f7f6f3
+}
+
+.string{
+    width: 17px;
+    height:800px;
+    background: linear-gradient(to bottom, #8B5A2B, #A0522D); 
+    border-radius: 5px; 
+    position: absolute;
+    left: 320px;
+    transform: translateX(-50%);
+    box-shadow: inset -2px -2px 5px rgba(0,0,0,0.2), inset 2px 2px 5px rgba(255,255,255,0.2); 
+    top: 400px;  
+    animation: swingDrop2 2s ease forwards;
+
+}
+
+.headerTodo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 180px;
+    font-size: 60px;
+    color: #1F1E1E;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    background-color: #FFF8DC; 
+    position: absolute;
+    top: -300px;
+    left: 320px;
+    transform: translateX(-50%);
+    transform-origin: top center;
+    border: 2px solid #E0CDA9;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+    background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.02),
+        rgba(0,0,0,0.02) 2px,
+        transparent 2px,
+        transparent 4px
+    ); /* հորիզոնական նոթատետրային գծեր */
+    animation: swingDrop 5s ease forwards;
+}
+
+
+
+
+
+
+
+
+
+@keyframes swingDrop2 {
+  0% {
+    top: 700px;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  50% {
+    top: 600px; /* կեսին արդեն ներքևում */
+    transform: translateX(-50%) rotate(15deg);
+  }
+  65% {
+    top: 500px;
+    transform: translateX(-50%) rotate(-10deg);
+  }
+  80% {
+    top: 400px;
+    transform: translateX(-50%) rotate(7deg);
+  }
+  90% {
+    top: 300px;
+    transform: translateX(-50%) rotate(-3deg);
+  }
+  100% {
+    top: 200px;
+    transform: translateX(-50%) rotate(0deg); /* կանգ է առնում */
+  }
+}
+@keyframes swingDrop {
+  0% {
+    top: -50px;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  50% {
+    top: 100px; /* կեսին արդեն ներքևում */
+    transform: translateX(-50%) rotate(15deg);
+  }
+  65% {
+    top: 110px;
+    transform: translateX(-50%) rotate(-10deg);
+  }
+  80% {
+    top: 120px;
+    transform: translateX(-50%) rotate(7deg);
+  }
+  90% {
+    top: 130px;
+    transform: translateX(-50%) rotate(-3deg);
+  }
+  100% {
+    top: 140px;
+    transform: translateX(-50%) rotate(0deg); /* կանգ է առնում */
+  }
+}
+.addTask{
+    height: 30px!important;
+    width: 60px!important;
+    background-color: #e0e0dd!important;
+    border: none!important;
+    margin-top: 0px!important;
+}
+
+ul {
+  background: repeating-linear-gradient(
+    to bottom,
+    #FDFDFD,
+    #FDFDFD 28px,
+    #D3D3D3 29px
+  );
+  border-left: 3px solid #FF7B7B; 
+  line-height: 30px;
+  list-style: none;
+  width: 100%;
+  max-height: 450px;
+  // overflow-y: auto; 
+  font-family: "Courier New", Courier, monospace;
+  padding: 0 10px;  
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;                 
+  width: 100%;
+  overflow-wrap: break-word;
+  margin-bottom: 5px;              
+}
+
+todoPage {
+  padding: 40px;
+  font-family: "Courier New", Courier, monospace;
+}
+.taskInput {
+  width: 60%;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.addTask {
+  margin-left: 10px;
+  background-color: #E0E0DD;
+  border: none;
+  cursor: pointer;
+}
+.notebookList {
+  background: repeating-linear-gradient(
+    to bottom,
+    #FDFDFD,
+    #FDFDFD 28px,
+    #D3D3D3 29px
+  );
+  border-left: 3px solid #FF7B7B;
+  line-height: 30px;
+  list-style: none;
+  width: 100%;
+  max-height: 450px;
+  overflow-y: auto;
+  font-family: "Courier New", Courier, monospace;
+  min-height: 400px;
+}
+.empty {
+  color: #999;
+  font-style: italic;
+}
+.formandlogin{
+    display:flex;
+   flex-direction: column;
+}
+.loginRedirect{
+    display:flex;
+    flex-direction: row;
+    gap:5px;
+    align-items: center;
+}
+li{
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+.taskButtons{
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+.todobutton{
+  font-size: 13px;
+}
+.logoutButton{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #e0e0dd!important;
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.welcome{
+  font-size: 24px;
+  margin: 0;
+
+}
+.redirect{
+    text-decoration: underline;
+    cursor: pointer;
+    background: none!important;
+}
+.adzik{
+  width: 100px;
+  height: auto;
+}
