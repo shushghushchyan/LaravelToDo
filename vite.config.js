@@ -8,8 +8,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 // set backend target based on environment
 const backendUrl = isProduction
-    ? 'https://laravel-to-doooop'   // 👈 your deployed backend (Vercel domain or API domain)
-    : 'http://127.0.0.1:8000';            // 👈 local Laravel backend
+    ? 'https://laravel-to-doooop.vercel.app'  // ✅ fixed URL
+    : 'http://127.0.0.1:8000';                // ✅ local backend
 
 export default defineConfig({
     plugins: [
