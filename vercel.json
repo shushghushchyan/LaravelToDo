@@ -1,10 +1,9 @@
-
 {
   "buildCommand": "npm run build:frontend",
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://laravel-to-doooop-shushannas-projects-a2322bff.vercel.app" },
+    { "source": "/api/(.*)", "destination": "https://laravel-to-doooop-g6gvu8nkj-shushannas-projects-a2322bff.vercel.app/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
