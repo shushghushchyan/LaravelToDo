@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { usePage } from "@inertiajs/react";
-import adzik from '/public/build/assets/adzik.jpg';
+
 
 
 
@@ -160,7 +160,7 @@ const handlelogout = async () => {
     <div>
       <div className="string"></div>
       <div className="headerTodo">
-        {user.name === "Adzik" && <img className="adzik" src={adzik} alt="" />}
+        {user.name === "Adzik" && <img className="adzik" src="/build/assets/adzik.jpg" alt="" />}
       <h3 className="welcome">
   {user.name === "Adzik"
     ? `Ողջու՜՜՜յն, ${user?.name}։`
