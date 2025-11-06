@@ -4,13 +4,16 @@ import path from 'path';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const backendUrl = isProduction
-  ? 'https://your-laravel-backend.com' // 👈 replace this with your backend URL later
+  ? 'https://your-laravel-backend.com' // 👈 replace this later with your backend URL
   : 'http://127.0.0.1:8000';
 
 export default defineConfig({
-  root: 'resources/js', // your React app root
   build: {
-    outDir: '../../dist', // builds dist/index.html for Vercel
+    outDir: 'dist', // ✅ output to /dist
+    emptyOutDir: true,
+    rollupOptions: {
+      input: 'resources/js/app.jsx', // ✅ use your React entry
+    },
   },
   plugins: [react()],
   resolve: {

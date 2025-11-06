@@ -2,9 +2,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "vite",
+  "dev": "vite",
   "build:frontend": "vite build --config vite.frontend.config.js"
-
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
