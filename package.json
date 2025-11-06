@@ -3,8 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
-        "build:frontend": "vite build --config vite.frontend.config.js"
+  "build:frontend": "vite build --config vite.frontend.config.js"
 
     },
     "devDependencies": {
